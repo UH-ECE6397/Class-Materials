@@ -1,3 +1,3 @@
 # Class-Materials
--Power point lecture slides
--In-class worksheets
+1. Power point lecture slides
+1. In-class worksheets

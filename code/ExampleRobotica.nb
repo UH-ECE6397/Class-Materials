@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    118776,       3287]
-NotebookOptionsPosition[    112465,       3089]
-NotebookOutlinePosition[    112823,       3105]
-CellTagsIndexPosition[    112780,       3102]
+NotebookDataLength[    147655,       4065]
+NotebookOptionsPosition[    139380,       3811]
+NotebookOutlinePosition[    139738,       3827]
+CellTagsIndexPosition[    139695,       3824]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -604,6 +604,728 @@ Cell[BoxData[
   Function[BoxForm`e$, 
    MatrixForm[BoxForm`e$]]]], "Output",
  CellChangeTimes->{3.663891767877592*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+SCARA arm (page 92 to 93, RG&C.  Note that the picture results in nonzero d1. \
+ I resolve this by shifting the base frame up so that d1 = 0.)\
+\>", "Subchapter",
+ CellChangeTimes->{{3.6635915096062117`*^9, 3.663591511306875*^9}, {
+  3.663891292675042*^9, 3.6638913337063437`*^9}, {3.663891383149328*^9, 
+  3.663891388316021*^9}, {3.6638916336117897`*^9, 3.663891646842723*^9}, {
+  3.663981934187684*^9, 3.663981992863996*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DataFile", "[", "\"\<SCARAarm.txt\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.663610034042536*^9, 3.663610048020355*^9}, {
+  3.663610089772067*^9, 3.6636100909264183`*^9}, {3.66389165483978*^9, 
+  3.6638916618128633`*^9}, {3.663982011973711*^9, 3.6639820147048187`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"No dynamics data found.\"\>"], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.663982043397972*^9}}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.663982043405592*^9}}],
+
+Cell[BoxData["\<\"Kinematics Input Data\"\>"], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.66398204341501*^9}}],
+
+Cell[BoxData["\<\"---------------------\"\>"], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.663982043425335*^9}}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.663982043433785*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   InterpretationBox[GridBox[{
+      {"\<\"Joint\"\>"},
+      {"\<\" \"\>"},
+      {"1"},
+      {"2"},
+      {"3"},
+      {"4"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"Joint", " ", 1, 2, 3, 4}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"   \"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"   "}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"Type\"\>"},
+      {"\<\" \"\>"},
+      {"\<\"revolute\"\>"},
+      {"\<\"revolute\"\>"},
+      {"\<\"prismatic\"\>"},
+      {"\<\"revolute\"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"Type", " ", "revolute", "revolute", "prismatic", "revolute"}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"   \"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"   "}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"a\"\>"},
+      {"\<\" \"\>"},
+      {"\<\"r1\"\>"},
+      {"\<\"r2\"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"0\"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"a", " ", 
+      FortranForm[$CellContext`r1], 
+      FortranForm[$CellContext`r2], 
+      FortranForm[0], 
+      FortranForm[0]}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"   \"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"   "}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"alpha\"\>"},
+      {"\<\" \"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"Pi\"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"0\"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"alpha", " ", 
+      FortranForm[0], 
+      FortranForm[Pi], 
+      FortranForm[0], 
+      FortranForm[0]}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"   \"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"   "}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"d\"\>"},
+      {"\<\" \"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"q3\"\>"},
+      {"\<\"d4\"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"d", " ", 
+      FortranForm[0], 
+      FortranForm[0], 
+      FortranForm[$CellContext`q3], 
+      FortranForm[$CellContext`d4]}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"   \"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"   "}],
+    Editable->False], "\[InvisibleSpace]", 
+   InterpretationBox[GridBox[{
+      {"\<\"theta\"\>"},
+      {"\<\" \"\>"},
+      {"\<\"q1\"\>"},
+      {"\<\"q2\"\>"},
+      {"\<\"0\"\>"},
+      {"\<\"q4\"\>"}
+     },
+     BaselinePosition->{Baseline, {1, 1}},
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}}],
+    ColumnForm[{"theta", " ", 
+      FortranForm[$CellContext`q1], 
+      FortranForm[$CellContext`q2], 
+      FortranForm[0], 
+      FortranForm[$CellContext`q4]}],
+    Editable->False]}],
+  SequenceForm[
+   ColumnForm[{"Joint", " ", 1, 2, 3, 4}], 
+   ColumnForm[{"   "}], 
+   ColumnForm[{"Type", " ", "revolute", "revolute", "prismatic", "revolute"}], 
+   ColumnForm[{"   "}], 
+   ColumnForm[{"a", " ", 
+     FortranForm[$CellContext`r1], 
+     FortranForm[$CellContext`r2], 
+     FortranForm[0], 
+     FortranForm[0]}], 
+   ColumnForm[{"   "}], 
+   ColumnForm[{"alpha", " ", 
+     FortranForm[0], 
+     FortranForm[Pi], 
+     FortranForm[0], 
+     FortranForm[0]}], 
+   ColumnForm[{"   "}], 
+   ColumnForm[{"d", " ", 
+     FortranForm[0], 
+     FortranForm[0], 
+     FortranForm[$CellContext`q3], 
+     FortranForm[$CellContext`d4]}], 
+   ColumnForm[{"   "}], 
+   ColumnForm[{"theta", " ", 
+     FortranForm[$CellContext`q1], 
+     FortranForm[$CellContext`q2], 
+     FortranForm[0], 
+     FortranForm[$CellContext`q4]}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.663610048473433*^9, {3.663610091337816*^9, 3.663610095947105*^9}, {
+   3.663610498807382*^9, 3.6636105017982187`*^9}, {3.66361078916707*^9, 
+   3.663610814632107*^9}, 3.6636108628735237`*^9, 3.663611005118456*^9, 
+   3.66361120278785*^9, {3.663611234306061*^9, 3.663611244946828*^9}, 
+   3.663611315390367*^9, 3.663611422464814*^9, 3.663611864434134*^9, 
+   3.66389135264846*^9, 3.663891597714488*^9, 3.663891662300724*^9, {
+   3.663982015516943*^9, 3.6639820434427834`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FKin", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.6636108871318083`*^9, 3.663610893507937*^9}, {
+  3.663611574311058*^9, 3.663611577187051*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820485514507`*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820485586777`*^9}],
+
+Cell[BoxData["\<\"A Matrices Formed :\"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048566187*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820485738773`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"A[\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["A[", 1, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048581874*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"A[\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["A[", 2, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048589994*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"A[\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["A[", 3, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048597515*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"A[\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["A[", 4, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048604772*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048612034*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048622867*^9}],
+
+Cell[BoxData["\<\"T Matrices Formed :\"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.66398204863568*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048646323*^9}],
+
+Cell[BoxData["\<\"T[0,0]\"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820486570873`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 0, ",", 1, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048670329*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 0, ",", 2, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820486791353`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 0, ",", 3, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820486887712`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 0, ",", 4, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820486985817`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 1, ",", 2, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.6639820487068377`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 1, ",", 3, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048715885*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "1", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 1, ",", 4, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048723708*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 2, ",", 3, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048732473*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 2, ",", 4, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048739846*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"T[\"\>", "\[InvisibleSpace]", "3", 
+   "\[InvisibleSpace]", "\<\",\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\"]\"\>"}],
+  SequenceForm["T[", 3, ",", 4, "]"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048748126*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048755349*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048762879*^9}],
+
+Cell[BoxData["\<\"Jacobian Formed : \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048770052*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048781425*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Jacobian  J\"\>", "\[InvisibleSpace]", "\<\"(6\"\>", 
+   "\[InvisibleSpace]", "\<\"x\"\>", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", "\<\")\"\>"}],
+  SequenceForm["Jacobian  J", "(6", "x", 4, ")"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048789837*^9}],
+
+Cell[BoxData["\<\" \"\>"], "Print",
+ CellChangeTimes->{
+  3.6636108938346367`*^9, 3.663611248642167*^9, 3.663611317928274*^9, {
+   3.663611574838283*^9, 3.663611577606456*^9}, 3.663611866285697*^9, 
+   3.663891667216859*^9, 3.663982048798213*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"here", " ", "are", " ", "all", " ", "the", " ", "A", " ", 
+    RowBox[{"matrices", "!"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A", "[", "i", "]"}], "//", "MatrixForm"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "4"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.663611597822241*^9, 3.663611616621744*^9}, {
+   3.663891228827919*^9, 3.663891236088357*^9}, {3.663891683179266*^9, 
+   3.663891688193624*^9}, 3.663891762535149*^9, {3.663982052973309*^9, 
+   3.663982053200346*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        SubscriptBox["\<\"c\"\>", "\<\"1\"\>"], 
+        RowBox[{"-", 
+         SubscriptBox["\<\"s\"\>", "\<\"1\"\>"]}], "0", 
+        RowBox[{"r1", " ", 
+         SubscriptBox["\<\"c\"\>", "\<\"1\"\>"]}]},
+       {
+        SubscriptBox["\<\"s\"\>", "\<\"1\"\>"], 
+        SubscriptBox["\<\"c\"\>", "\<\"1\"\>"], "0", 
+        RowBox[{"r1", " ", 
+         SubscriptBox["\<\"s\"\>", "\<\"1\"\>"]}]},
+       {"0", "0", "1", "0"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        SubscriptBox["\<\"c\"\>", "\<\"2\"\>"], 
+        SubscriptBox["\<\"s\"\>", "\<\"2\"\>"], "0", 
+        RowBox[{"r2", " ", 
+         SubscriptBox["\<\"c\"\>", "\<\"2\"\>"]}]},
+       {
+        SubscriptBox["\<\"s\"\>", "\<\"2\"\>"], 
+        RowBox[{"-", 
+         SubscriptBox["\<\"c\"\>", "\<\"2\"\>"]}], "0", 
+        RowBox[{"r2", " ", 
+         SubscriptBox["\<\"s\"\>", "\<\"2\"\>"]}]},
+       {"0", "0", 
+        RowBox[{"-", "1"}], "0"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0"},
+       {"0", "1", "0", "0"},
+       {"0", "0", "1", "q3"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {
+        SubscriptBox["\<\"c\"\>", "\<\"4\"\>"], 
+        RowBox[{"-", 
+         SubscriptBox["\<\"s\"\>", "\<\"4\"\>"]}], "0", "0"},
+       {
+        SubscriptBox["\<\"s\"\>", "\<\"4\"\>"], 
+        SubscriptBox["\<\"c\"\>", "\<\"4\"\>"], "0", "0"},
+       {"0", "0", "1", "d4"},
+       {"0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.663610907813384*^9, 3.6636109351019773`*^9}, {
+   3.6636112545068808`*^9, 3.6636113217773523`*^9}, {3.663611583783978*^9, 
+   3.663611616969574*^9}, 3.6636118761600313`*^9, {3.663891673898017*^9, 
+   3.663891705136033*^9}, 3.663891762993593*^9, 3.663982053561202*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"here", " ", "are", " ", "the", " ", "forward", " ", 
+    RowBox[{"kinematics", "!"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SimplifyTrigNotation", ";"}], " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Simplify", "[", 
+     RowBox[{"T", "[", 
+      RowBox[{"0", ",", "4"}], "]"}], "]"}], "//", 
+    "MatrixForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.6636113259898376`*^9, 3.663611345643162*^9}, {
+  3.6638912385041924`*^9, 3.66389124938466*^9}, {3.663891760555976*^9, 
+  3.663891760770174*^9}, {3.663982064088398*^9, 3.6639820927175417`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"Cos", "[", 
+       RowBox[{"q1", "+", "q2", "-", "q4"}], "]"}], 
+      RowBox[{"Sin", "[", 
+       RowBox[{"q1", "+", "q2", "-", "q4"}], "]"}], "0", 
+      RowBox[{
+       RowBox[{"r1", " ", 
+        SubscriptBox["\<\"c\"\>", "\<\"1\"\>"]}], "+", 
+       RowBox[{"r2", " ", 
+        SubscriptBox["\<\"c\"\>", "\<\"12\"\>"]}]}]},
+     {
+      RowBox[{"Sin", "[", 
+       RowBox[{"q1", "+", "q2", "-", "q4"}], "]"}], 
+      RowBox[{"-", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"q1", "+", "q2", "-", "q4"}], "]"}]}], "0", 
+      RowBox[{
+       RowBox[{"r1", " ", 
+        SubscriptBox["\<\"s\"\>", "\<\"1\"\>"]}], "+", 
+       RowBox[{"r2", " ", 
+        SubscriptBox["\<\"s\"\>", "\<\"12\"\>"]}]}]},
+     {"0", "0", 
+      RowBox[{"-", "1"}], 
+      RowBox[{
+       RowBox[{"-", "d4"}], "-", "q3"}]},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.663891767877592*^9, {3.6639820647047358`*^9, 3.663982093156406*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -3162,131 +3884,187 @@ Cell[17887, 492, 2257, 58, 81, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[20181, 555, 480, 11, 46, "Input"],
-Cell[20664, 568, 1284, 37, 110, "Output"]
+Cell[20664, 568, 1284, 37, 99, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21997, 611, 203, 3, 62, "Subchapter"],
+Cell[21997, 611, 437, 7, 95, "Subchapter"],
 Cell[CellGroupData[{
-Cell[22225, 618, 200, 3, 28, "Input"],
+Cell[22459, 622, 295, 4, 28, "Input"],
 Cell[CellGroupData[{
-Cell[22450, 625, 483, 7, 22, "Print"],
-Cell[22936, 634, 461, 7, 21, "Print"],
-Cell[23400, 643, 481, 7, 22, "Print"],
-Cell[23884, 652, 481, 7, 21, "Print"],
-Cell[24368, 661, 459, 7, 21, "Print"],
-Cell[24830, 670, 6753, 215, 135, "Print"]
+Cell[22779, 630, 555, 8, 22, "Print"],
+Cell[23337, 640, 533, 8, 21, "Print"],
+Cell[23873, 650, 552, 8, 22, "Print"],
+Cell[24428, 660, 553, 8, 21, "Print"],
+Cell[24984, 670, 533, 8, 21, "Print"],
+Cell[25520, 680, 5955, 184, 103, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31632, 891, 169, 3, 28, "Input"],
+Cell[31524, 870, 169, 3, 28, "Input"],
 Cell[CellGroupData[{
-Cell[31826, 898, 198, 3, 21, "Print"],
-Cell[32027, 903, 197, 3, 21, "Print"],
-Cell[32227, 908, 216, 3, 21, "Print"],
-Cell[32446, 913, 198, 3, 21, "Print"],
-Cell[32647, 918, 348, 8, 21, "Print"],
-Cell[32998, 928, 346, 8, 21, "Print"],
-Cell[33347, 938, 345, 8, 21, "Print"],
-Cell[33695, 948, 346, 8, 21, "Print"],
-Cell[34044, 958, 345, 8, 21, "Print"],
-Cell[34392, 968, 346, 8, 21, "Print"],
-Cell[34741, 978, 200, 3, 21, "Print"],
-Cell[34944, 983, 198, 3, 21, "Print"],
-Cell[35145, 988, 218, 3, 21, "Print"],
-Cell[35366, 993, 200, 3, 21, "Print"],
-Cell[35569, 998, 203, 3, 21, "Print"],
-Cell[35775, 1003, 420, 9, 21, "Print"],
-Cell[36198, 1014, 417, 9, 21, "Print"],
-Cell[36618, 1025, 418, 9, 21, "Print"],
-Cell[37039, 1036, 420, 9, 21, "Print"],
-Cell[37462, 1047, 418, 9, 21, "Print"],
-Cell[37883, 1058, 418, 9, 21, "Print"],
-Cell[38304, 1069, 420, 9, 21, "Print"],
-Cell[38727, 1080, 417, 9, 21, "Print"],
-Cell[39147, 1091, 420, 9, 21, "Print"],
-Cell[39570, 1102, 418, 9, 21, "Print"],
-Cell[39991, 1113, 420, 9, 21, "Print"],
-Cell[40414, 1124, 420, 9, 21, "Print"],
-Cell[40837, 1135, 418, 9, 21, "Print"],
-Cell[41258, 1146, 417, 9, 21, "Print"],
-Cell[41678, 1157, 418, 9, 21, "Print"],
-Cell[42099, 1168, 420, 9, 21, "Print"],
-Cell[42522, 1179, 418, 9, 21, "Print"],
-Cell[42943, 1190, 418, 9, 21, "Print"],
-Cell[43364, 1201, 420, 9, 21, "Print"],
-Cell[43787, 1212, 418, 9, 21, "Print"],
-Cell[44208, 1223, 418, 9, 21, "Print"],
-Cell[44629, 1234, 198, 3, 21, "Print"],
-Cell[44830, 1239, 198, 3, 21, "Print"],
-Cell[45031, 1244, 215, 3, 21, "Print"],
-Cell[45249, 1249, 197, 3, 21, "Print"],
-Cell[45449, 1254, 448, 9, 21, "Print"],
-Cell[45900, 1265, 200, 3, 21, "Print"]
+Cell[31718, 877, 248, 4, 21, "Print"],
+Cell[31969, 883, 248, 4, 21, "Print"],
+Cell[32220, 889, 264, 4, 21, "Print"],
+Cell[32487, 895, 248, 4, 21, "Print"],
+Cell[32738, 901, 394, 9, 21, "Print"],
+Cell[33135, 912, 394, 9, 21, "Print"],
+Cell[33532, 923, 394, 9, 21, "Print"],
+Cell[33929, 934, 394, 9, 21, "Print"],
+Cell[34326, 945, 246, 4, 21, "Print"],
+Cell[34575, 951, 246, 4, 21, "Print"],
+Cell[34824, 957, 263, 4, 21, "Print"],
+Cell[35090, 963, 246, 4, 21, "Print"],
+Cell[35339, 969, 253, 4, 21, "Print"],
+Cell[35595, 975, 466, 10, 21, "Print"],
+Cell[36064, 987, 468, 10, 21, "Print"],
+Cell[36535, 999, 468, 10, 21, "Print"],
+Cell[37006, 1011, 468, 10, 21, "Print"],
+Cell[37477, 1023, 468, 10, 21, "Print"],
+Cell[37948, 1035, 466, 10, 21, "Print"],
+Cell[38417, 1047, 466, 10, 21, "Print"],
+Cell[38886, 1059, 466, 10, 21, "Print"],
+Cell[39355, 1071, 466, 10, 21, "Print"],
+Cell[39824, 1083, 466, 10, 21, "Print"],
+Cell[40293, 1095, 246, 4, 21, "Print"],
+Cell[40542, 1101, 246, 4, 21, "Print"],
+Cell[40791, 1107, 263, 4, 21, "Print"],
+Cell[41057, 1113, 246, 4, 21, "Print"],
+Cell[41306, 1119, 496, 10, 21, "Print"],
+Cell[41805, 1131, 246, 4, 21, "Print"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[46149, 1274, 490, 12, 40, "Input"],
-Cell[46642, 1288, 5379, 146, 81, "Output"]
+Cell[42100, 1141, 613, 14, 40, "Input"],
+Cell[42716, 1157, 3988, 106, 81, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52058, 1439, 431, 10, 46, "Input"],
-Cell[52492, 1451, 10835, 276, 92, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[63364, 1732, 113, 3, 28, "Input"],
-Cell[63480, 1737, 10204, 265, 80, "Output"]
+Cell[46741, 1268, 621, 14, 63, "Input"],
+Cell[47365, 1284, 1498, 43, 92, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[73733, 2008, 276, 5, 95, "Subchapter"],
-Cell[74012, 2015, 1768, 45, 97, "Input"],
+Cell[48912, 1333, 203, 3, 62, "Subchapter"],
 Cell[CellGroupData[{
-Cell[75805, 2064, 218, 5, 28, "Input"],
-Cell[76026, 2071, 1594, 43, 92, "Output"]
+Cell[49140, 1340, 200, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[49365, 1347, 483, 7, 22, "Print"],
+Cell[49851, 1356, 461, 7, 21, "Print"],
+Cell[50315, 1365, 481, 7, 22, "Print"],
+Cell[50799, 1374, 481, 7, 21, "Print"],
+Cell[51283, 1383, 459, 7, 21, "Print"],
+Cell[51745, 1392, 6753, 215, 135, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77669, 2120, 96, 1, 62, "Subchapter"],
+Cell[58547, 1613, 169, 3, 28, "Input"],
 Cell[CellGroupData[{
-Cell[77790, 2125, 781, 19, 131, "Input"],
-Cell[78574, 2146, 1185, 32, 92, "Output"],
-Cell[79762, 2180, 852, 23, 92, "Output"],
-Cell[80617, 2205, 1413, 39, 92, "Output"]
+Cell[58741, 1620, 198, 3, 21, "Print"],
+Cell[58942, 1625, 197, 3, 21, "Print"],
+Cell[59142, 1630, 216, 3, 21, "Print"],
+Cell[59361, 1635, 198, 3, 21, "Print"],
+Cell[59562, 1640, 348, 8, 21, "Print"],
+Cell[59913, 1650, 346, 8, 21, "Print"],
+Cell[60262, 1660, 345, 8, 21, "Print"],
+Cell[60610, 1670, 346, 8, 21, "Print"],
+Cell[60959, 1680, 345, 8, 21, "Print"],
+Cell[61307, 1690, 346, 8, 21, "Print"],
+Cell[61656, 1700, 200, 3, 21, "Print"],
+Cell[61859, 1705, 198, 3, 21, "Print"],
+Cell[62060, 1710, 218, 3, 21, "Print"],
+Cell[62281, 1715, 200, 3, 21, "Print"],
+Cell[62484, 1720, 203, 3, 21, "Print"],
+Cell[62690, 1725, 420, 9, 21, "Print"],
+Cell[63113, 1736, 417, 9, 21, "Print"],
+Cell[63533, 1747, 418, 9, 21, "Print"],
+Cell[63954, 1758, 420, 9, 21, "Print"],
+Cell[64377, 1769, 418, 9, 21, "Print"],
+Cell[64798, 1780, 418, 9, 21, "Print"],
+Cell[65219, 1791, 420, 9, 21, "Print"],
+Cell[65642, 1802, 417, 9, 21, "Print"],
+Cell[66062, 1813, 420, 9, 21, "Print"],
+Cell[66485, 1824, 418, 9, 21, "Print"],
+Cell[66906, 1835, 420, 9, 21, "Print"],
+Cell[67329, 1846, 420, 9, 21, "Print"],
+Cell[67752, 1857, 418, 9, 21, "Print"],
+Cell[68173, 1868, 417, 9, 21, "Print"],
+Cell[68593, 1879, 418, 9, 21, "Print"],
+Cell[69014, 1890, 420, 9, 21, "Print"],
+Cell[69437, 1901, 418, 9, 21, "Print"],
+Cell[69858, 1912, 418, 9, 21, "Print"],
+Cell[70279, 1923, 420, 9, 21, "Print"],
+Cell[70702, 1934, 418, 9, 21, "Print"],
+Cell[71123, 1945, 418, 9, 21, "Print"],
+Cell[71544, 1956, 198, 3, 21, "Print"],
+Cell[71745, 1961, 198, 3, 21, "Print"],
+Cell[71946, 1966, 215, 3, 21, "Print"],
+Cell[72164, 1971, 197, 3, 21, "Print"],
+Cell[72364, 1976, 448, 9, 21, "Print"],
+Cell[72815, 1987, 200, 3, 21, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[73064, 1996, 490, 12, 40, "Input"],
+Cell[73557, 2010, 5379, 146, 81, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78973, 2161, 431, 10, 46, "Input"],
+Cell[79407, 2173, 10835, 276, 81, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[90279, 2454, 113, 3, 28, "Input"],
+Cell[90395, 2459, 10204, 265, 80, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[82079, 2250, 159, 2, 62, "Subchapter"],
+Cell[100648, 2730, 276, 5, 95, "Subchapter"],
+Cell[100927, 2737, 1768, 45, 97, "Input"],
 Cell[CellGroupData[{
-Cell[82263, 2256, 1154, 28, 165, "Input"],
-Cell[83420, 2286, 1012, 27, 92, "Output"],
-Cell[84435, 2315, 1153, 31, 92, "Output"],
-Cell[85591, 2348, 1152, 31, 92, "Output"],
-Cell[86746, 2381, 2595, 71, 92, "Output"]
+Cell[102720, 2786, 218, 5, 28, "Input"],
+Cell[102941, 2793, 1594, 43, 92, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89390, 2458, 205, 3, 62, "Subchapter"],
+Cell[104584, 2842, 96, 1, 62, "Subchapter"],
 Cell[CellGroupData[{
-Cell[89620, 2465, 1267, 31, 165, "Input"],
-Cell[90890, 2498, 943, 26, 92, "Output"],
-Cell[91836, 2526, 773, 22, 92, "Output"],
-Cell[92612, 2550, 1083, 30, 92, "Output"],
-Cell[93698, 2582, 1534, 43, 92, "Output"]
+Cell[104705, 2847, 781, 19, 131, "Input"],
+Cell[105489, 2868, 1185, 32, 92, "Output"],
+Cell[106677, 2902, 852, 23, 92, "Output"],
+Cell[107532, 2927, 1413, 39, 92, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[95281, 2631, 249, 3, 62, "Subchapter"],
-Cell[95533, 2636, 1267, 31, 165, "Input"]
+Cell[108994, 2972, 159, 2, 62, "Subchapter"],
+Cell[CellGroupData[{
+Cell[109178, 2978, 1154, 28, 165, "Input"],
+Cell[110335, 3008, 1012, 27, 92, "Output"],
+Cell[111350, 3037, 1153, 31, 92, "Output"],
+Cell[112506, 3070, 1152, 31, 92, "Output"],
+Cell[113661, 3103, 2595, 71, 92, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[96837, 2672, 213, 3, 62, "Subchapter"],
+Cell[116305, 3180, 205, 3, 62, "Subchapter"],
 Cell[CellGroupData[{
-Cell[97075, 2679, 2008, 53, 233, "Input"],
-Cell[99086, 2734, 918, 25, 92, "Output"],
-Cell[100007, 2761, 917, 25, 92, "Output"],
-Cell[100927, 2788, 726, 20, 92, "Output"],
-Cell[101656, 2810, 10781, 275, 92, "Output"]
+Cell[116535, 3187, 1267, 31, 165, "Input"],
+Cell[117805, 3220, 943, 26, 92, "Output"],
+Cell[118751, 3248, 773, 22, 92, "Output"],
+Cell[119527, 3272, 1083, 30, 92, "Output"],
+Cell[120613, 3304, 1534, 43, 92, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122196, 3353, 249, 3, 62, "Subchapter"],
+Cell[122448, 3358, 1267, 31, 165, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123752, 3394, 213, 3, 62, "Subchapter"],
+Cell[CellGroupData[{
+Cell[123990, 3401, 2008, 53, 233, "Input"],
+Cell[126001, 3456, 918, 25, 92, "Output"],
+Cell[126922, 3483, 917, 25, 92, "Output"],
+Cell[127842, 3510, 726, 20, 92, "Output"],
+Cell[128571, 3532, 10781, 275, 92, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
